@@ -103,7 +103,7 @@ If you wish to use cloud persistence and multi-user authentication:
 4. In **Authentication &rarr; Providers &rarr; Email**, toggle off "Confirm email" for testing.
 5. Copy your project credentials to `.env`.
 
-> *Note: If Supabase keys are omitted, Pixtale runs in **Demo Mode** with local in-memory storage and instant login.*
+> *Note: If Supabase keys are omitted, Pixtale runs in **Demo Mode** with local in-memory storage and instant login (Email: `guptahoney0124@gmail.com`, Password: `Honey Gupta`).*
 
 ### 5. Start the Application
 

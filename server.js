@@ -186,8 +186,8 @@ async function requireUser(req, res, next) {
     if (token === 'demo-token' || token.startsWith('demo-token')) {
       req.user = {
         id: '00000000-0000-0000-0000-000000000001',
-        email: 'demo@pixtale.ai',
-        user_metadata: { full_name: 'Demo Creator' }
+        email: 'guptahoney0124@gmail.com',
+        user_metadata: { full_name: 'Honey Gupta' }
       };
       return next();
     }

@@ -758,14 +758,19 @@ async function signIn() {
       }
 
       if (!sb) {
-        // Demo sign in: accept demo@pixtale.ai / password123 or any email and password >= 6
-        if (password.length < 6) {
+        // Demo sign in: accept guptahoney0124@gmail.com / Honey Gupta or any email and password >= 6
+        if (email.toLowerCase() === 'guptahoney0124@gmail.com') {
+          if (password !== 'Honey Gupta') {
+            throw new Error('Incorrect password. Please enter the valid password.');
+          }
+        } else if (password.length < 6) {
           throw new Error('Password must be at least 6 characters.');
         }
+
         user = {
           id: '00000000-0000-0000-0000-000000000001',
-          email,
-          user_metadata: { full_name: email === 'demo@pixtale.ai' ? 'Demo Creator' : email.split('@')[0] }
+          email: email.toLowerCase() === 'guptahoney0124@gmail.com' ? 'guptahoney0124@gmail.com' : email,
+          user_metadata: { full_name: email.toLowerCase() === 'guptahoney0124@gmail.com' ? 'Honey Gupta' : (email.split('@')[0]) }
         };
         if (remember) {
           localStorage.setItem('vc_demo_user', JSON.stringify(user));
